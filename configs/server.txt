@@ -1,0 +1,25 @@
+[ req ]
+default_md         = sha512
+prompt             = no
+req_extensions     = v3_req
+distinguished_name = req_distinguished_name
+
+[ req_distinguished_name ]
+countryName            = US
+localityName           = Locality Name (eg, city)
+organizationalUnitName = Organizational Unit Name (eg, section)
+commonName             = Common Name (eg, YOUR name, 64 chars max)
+emailAddress           = Email Address (40 chars max)
+
+[ v3_req ]
+keyUsage         = critical,digitalSignature,keyEncipherment
+extendedKeyUsage = critical,clientAuth,serverAuth
+subjectAltName   = @alt_names
+
+[ alt_names ]
+IP.0    = 1.1.1.1
+IP.1    = 2.2.2.2
+DNS.0   = server1.example.com
+DNS.1   = server2.example.com
+email.0 = email1@example.com
+email.1 = email2@example.com

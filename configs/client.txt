@@ -1,0 +1,15 @@
+[ req ]
+default_md         = sha512
+prompt             = no
+req_extensions     = v3_req
+distinguished_name = req_distinguished_name
+
+[ req_distinguished_name ]
+countryName            = US
+localityName           = Locality Name (eg, city)
+organizationalUnitName = Organizational Unit Name (eg, section)
+commonName             = Common Name (eg, YOUR name, 64 chars max)
+
+[ v3_req ]
+keyUsage         = critical,digitalSignature,keyEncipherment
+extendedKeyUsage = critical,clientAuth,serverAuth
